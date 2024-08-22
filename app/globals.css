@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 body {
-  background-color: #000;
+  background: url('https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .red-gradient {

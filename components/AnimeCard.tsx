@@ -19,10 +19,10 @@ interface Prop {
 
 function AnimeCard({ anime }: Prop) {
   return (
-    <div className="max-w-sm rounded relative w-full">
+    <div className="max-w-sm rounded-xl relative w-full">
       <div className="relative w-full h-[37vh]">
         <Image
-          src={anime.image.original}
+          src={`https://shikimori.one${anime.image.original}`}
           alt={anime.name}
           fill
           className="rounded-xl"
@@ -49,7 +49,7 @@ function AnimeCard({ anime }: Prop) {
               className="object-contain"
             />
             <p className="text-base text-white font-bold">
-              {anime.episodes || anime.episodes_aired}
+              Ep. {anime.episodes || anime.episodes_aired}
             </p>
           </div>
           <div className="flex flex-row gap-2 items-center">
@@ -60,7 +60,9 @@ function AnimeCard({ anime }: Prop) {
               height={18}
               className="object-contain"
             />
-            <p className="text-base font-bold text-[#FFAD49]">{anime.score}</p>
+            <p className="text-base font-bold text-[#FFAD49]">
+              {anime.score} / 10
+            </p>
           </div>
         </div>
       </div>
